@@ -1,5 +1,7 @@
 class Problem2
 
+    attr_accessor :list_one
+
     def initialize
         @list_one = [1,2]
         @i = 0
@@ -11,8 +13,6 @@ class Problem2
             @list_one << @list_one[@i] + @list_one[@i+1]
             @i += 1;
         end
-        @sum = @list_one[@i] + @list_one[@i+1] 
-        @list_one.last
     end
 
     def even?
