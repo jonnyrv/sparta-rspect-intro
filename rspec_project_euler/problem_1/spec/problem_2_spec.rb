@@ -7,11 +7,13 @@ describe 'Problem2' do
     end
 
     it 'should return the correct last number if the list does not exceeds four million' do
-        expect(@pb2.fibonacci(4000000)).to eq 3524578
+        @pb2.fibonacci 4000000
+        expect(@pb2.list_one.last).to eq 3524578
     end
 
     it 'should return the correct last number if the list does exceeds four million' do
-        expect(@pb2.fibonacci(6000000)).to be > 3524578
+        @pb2.fibonacci 6000000
+        expect(@pb2.list_one.last).to be > 3524578
     end
 
     it 'should return the correct sum of even number in the list' do
